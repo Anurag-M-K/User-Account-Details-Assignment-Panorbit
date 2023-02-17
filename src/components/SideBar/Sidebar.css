@@ -1,0 +1,6 @@
+.sidebar-content{
+    display: flex;
+    align-items: center;
+    background: #518dd0;
+    border-radius: 30px;
+}

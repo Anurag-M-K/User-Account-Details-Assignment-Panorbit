@@ -23,7 +23,7 @@ const UsersList = () => {
                             <ul className="list-group">
                                 {userData.map((values)=>{
                                 return(
-                                    <li><Link><img src={values.profilepicture} width='25px' alt="" /> <span>{values.name}</span></Link></li>
+                                    <li><Link to='/profile' ><img src={values.profilepicture} width='25px' alt="" /> <span>{values.name}</span></Link></li>
                                     )
                                 })}
                             </ul>
