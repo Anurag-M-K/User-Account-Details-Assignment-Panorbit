@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import ChatList from '../components/chatlist/ChatList'
 import Header from '../components/Header/Header'
 import Sidebar from '../components/SideBar/Sidebar'
 import ProfilePage from '../pages/ProfilePage'
@@ -23,6 +24,7 @@ const Routelinks = () => {
                             <Routes>
                                 <Route exact path='/profile' element={<ProfilePage/>}/>
                             </Routes>
+                    <ChatList/>
                         </div>
                     </div>
                 </div>

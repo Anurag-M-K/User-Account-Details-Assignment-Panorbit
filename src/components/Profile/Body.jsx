@@ -36,7 +36,7 @@ const Body = () => {
                             </div>
                             <hr />
                             <div className="pt-2">
-                                <div>Company</div>
+                            <div>Company</div>
                                 <table>
                                     <tr>
                                         <td className='key'>Name :</td>
