@@ -1,6 +1,24 @@
 .sidebar-content{
     display: flex;
     align-items: center;
-    background: #518dd0;
+    background: #3874ba;
     border-radius: 30px;
+}
+.sidebar{
+    width: 100%;
+}
+.sidebar-content li{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    color: #cccccc;
+    font-size: 15px;
+    transition: .2s ease-in;
+}
+.sidebar-content li:hover{
+    font-weight: 600;
+    color: #fff;
+}
+.sidebar-content ul{
+    padding-left: 20px;
+    width: 100%;
 }

@@ -1,16 +1,24 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { setLoggedUser, setUsers } from '../../redux/userSlice';
 
 const UsersList = () => {
-    const [userData, setUserData] = useState([]);
-    useEffect(()=>{
-        (async()=>{
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { users } = useSelector(state => state.users)
+    useEffect(() => {
+        (async () => {
             const users = await axios.get('https://panorbit.in/api/users.json')
-            setUserData(users.data?.users)
+            dispatch(setUsers(users.data?.users))
         })();
-    },[]);
-    console.log(userData);
+    }, []);
+
+    const hanldeLogin = (id)=>{
+        dispatch(setLoggedUser(users.filter((us) => us.id === id)[0]));
+        navigate('/profile')
+    }
     return (
         <div className="user">
             <div className='user-list'>
@@ -21,9 +29,9 @@ const UsersList = () => {
                     <div className="list">
                         <div className="col-lg-12">
                             <ul className="list-group">
-                                {userData.map((values)=>{
-                                return(
-                                    <li><Link to='/profile' ><img src={values.profilepicture} width='25px' alt="" /> <span>{values.name}</span></Link></li>
+                                {users.map((values) => {
+                                    return (
+                                        <li><button className='btn' onClick={() => hanldeLogin(values.id)}><img src={values.profilepicture} width='25px' alt="" /> <span>{values.name}</span></button></li>
                                     )
                                 })}
                             </ul>
