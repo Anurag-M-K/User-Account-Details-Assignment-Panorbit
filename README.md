@@ -1,6 +1,6 @@
 # User-Account-Details-Assignment-Panorbit
 
-#Dependencies used in the project
+# Dependencies used in the project
 "dependencies": {
     "@material-ui/icons": "^4.11.3",
     "@reduxjs/toolkit": "^1.9.2",
@@ -11,7 +11,7 @@
     "react-router-dom": "^6.8.1",
     "redux-persist": "^6.0.0"
 }
-#Step to Start the Project
+# Step to Start the Project
 1. Need to Install all the dependencies used in the project
      npm install
 
