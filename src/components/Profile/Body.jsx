@@ -4,7 +4,6 @@ import './Profile.css'
 
 const Body = () => {
     const { loggedUser } = useSelector(state => state.users);
-    console.log('vadv', loggedUser);
     return (
         <>
             <div className="conatiner-fluid pt-4">
@@ -80,7 +79,7 @@ const Body = () => {
                             </div>
                         </div>
                         <div className="col-12">
-                            <iframe width="100%" height="250" id="gmap_canvas" src={`https://maps.google.com/maps?q=${loggedUser?.address?.geo.lat},${loggedUser?.address?.geo.lng}=UTF8&iwloc=&output=embed`} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <iframe width="100%" height="250" id="gmap_canvas" src={`https://maps.google.com/maps?q=${loggedUser?.address?.geo.lng},${loggedUser?.address?.geo.lat}=UTF8&iwloc=&output=embed`} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             <div className="map-dire">
                                 <label className='me-5'><span className='key'>Lat:</span>{loggedUser?.address?.geo.lat}</label>
                                 <label><span className='key'>Lat:</span>{loggedUser?.address?.geo.lng}</label>

@@ -49,6 +49,7 @@
 .chats .user-list ul{
     height: 300px;
     overflow: scroll;
+    background: #fff;
 }
 .chats .user-list ul li{
     padding: 5px 15px;
