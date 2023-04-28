@@ -19,3 +19,5 @@
 
 2. To run the project
     npm run dev
+#screenshot
+![Screenshot (248)](https://user-images.githubusercontent.com/109131413/235164454-5d9dd4bb-06f6-4ec4-945d-db73a1a689f9.png)
